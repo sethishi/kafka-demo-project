@@ -1,0 +1,16 @@
+spring:
+  jms:
+    pub-sub-domain: true
+  kafka:
+    bootstrap-servers: 0.0.0.0:9092
+    consumer:
+      group-id: demo-service
+      auto-offset-reset: earliest
+app:
+  topic:
+    compactedTopic2: foo.t
+##logging:
+##  level:
+#    root: DEBUG
+#    org.springframework.web: ERROR
+#    com.memorynotfound: DEBUG
