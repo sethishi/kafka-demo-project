@@ -27,10 +27,8 @@ public class TopicsController {
         kafkaTemplate.send(Topics.MMR_CONTENT_REPO_TOPIC,key,item);
 
     }
-
     @PostMapping("/schedule/{key}")
     public void scheduleRepo(@RequestBody String item, @PathVariable String key){
-
         kafkaTemplate.send(Topics.MMR_SCHEDULE_REPO_TOPIC,key,item);
 
     }

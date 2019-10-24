@@ -1,5 +1,6 @@
 package com.example.demo.configuration;
 
+
 public interface Topics {
 
     String MMR_ITEM_REPO_TOPIC = "item-repo";

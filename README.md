@@ -1,18 +1,19 @@
+### Kafka demo to replace traditional database
+
+#### Demo application to produce data
+
+This application is a kafka producer and listener application.
+The scope of the application is to consolidate the data from 3 different streams of data and send it out on a common topic. 
+
+#### Kafka Stream to merge and produce the data
+
+VDIStreams is the application that 
 
 
-cheat sheet
+#### Start docker using kafka
+git clone https://github.com/confluentinc/examples
+cd cp-all-in-one/
+docker-compose up -d --build
 
-Producer 
-./kafka-console-producer --broker-list 0.0.0.0:9092 --topic input-topic
 
-List of Topics
-./kafka-topics --zookeeper localhost:2181 --list
 
-Delete a topic 
-./bin/kafka-topics --zookeeper localhost:2181 --delete --topic giorgos-.*
-
-Describe a topic
-./bin/kafka-topics --zookeeper localhost:2181 --describe --topic csc.in
-
-Enable deletion on topics
-./kafka-server-start config/server.properties --override delete.topic.enable=true 

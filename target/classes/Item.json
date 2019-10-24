@@ -1,0 +1,70 @@
+{
+  "itemId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "itemType": "string",
+  "itemSubType": "string",
+  "metadataSets": [
+    {
+      "language": "string",
+      "description": "string",
+      "territories": [
+        "string"
+      ],
+      "contentProviderId": "string",
+      "descriptiveData": [
+        {
+          "titles": [
+            {
+              "type": "short",
+              "value": "string"
+            }
+          ],
+          "synopses": [
+            {
+              "type": "short",
+              "value": "string"
+            }
+          ]
+        }
+      ],
+      "genre": [
+        {
+          "genre": "string",
+          "subGenre": "string"
+        }
+      ],
+      "credits": [
+        {
+          "order": 0,
+          "role": "string",
+          "contributorId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "character": {
+            "characterId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "firstName": "string",
+            "fullName": "string",
+            "lastName": "string"
+          },
+          "isStar": true
+        }
+      ],
+      "images": [
+        {
+          "type": "string",
+          "imageId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        }
+      ]
+    }
+  ],
+  "linkedItems": [
+    {
+      "relationType": "string",
+      "itemId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    }
+  ],
+  "linkedItemGroups": [
+    {
+      "relationType": "string",
+      "contentProviderId": "string",
+      "itemGroupId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    }
+  ]
+}

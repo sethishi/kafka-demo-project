@@ -3,6 +3,7 @@ package com.example.demo.configuration;
 
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.NewTopic;
+import org.apache.kafka.connect.util.TopicAdmin;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +12,7 @@ import org.springframework.kafka.core.KafkaAdmin;
 import java.util.HashMap;
 import java.util.Map;
 
-@Configuration
+//@Configuration
 public class KafkaTopicConfig {
 
     @Value(value = "${spring.kafka.bootstrap-servers}")
@@ -26,8 +27,28 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic topic1() {
-        return new NewTopic("compactedTopic", 1, (short) 1);
+
+        NewTopic compactedTopic =
+                TopicAdmin.
+                        defineTopic("content-repo")
+                        .partitions(1).replicationFactor((short) 1).compacted().build();
+        return compactedTopic;
     }
 
+    @Bean
+    public NewTopic topic() {
+
+        NewTopic compactedTopic =
+                TopicAdmin.defineTopic("item-repo").partitions(1).replicationFactor((short) 1).compacted().build();
+        return compactedTopic;
+    }
+
+    @Bean
+    public NewTopic topic3() {
+
+        NewTopic compactedTopic =
+                TopicAdmin.defineTopic("schedule-repo").partitions(1).replicationFactor((short) 1).compacted().build();
+        return compactedTopic;
+    }
 
 }
