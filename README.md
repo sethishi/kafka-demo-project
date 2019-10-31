@@ -7,7 +7,7 @@ The scope of the application is to consolidate the data from 3 different streams
 
 #### Kafka Stream to merge and produce the data
 
-VDIStreams is the streaming application that is consolidating the data on arrival on 3 difffrent topics and then joining them to create a new consolidated strea.  
+VDIStreams is the streaming application that is consolidating the data on arrival on 3 difffrent topics and then joining them to create a new consolidated stream.  
 
 
 #### Start docker using kafka
